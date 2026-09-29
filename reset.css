@@ -1,0 +1,59 @@
+
+*, *::after, *::before{        
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;  /* чтобы в размер элемента помещались всякие паддиги и бордеры */
+}
+
+a, a:visited, a:hover{
+    color: inherit;        /* наследует цвет родителя*/
+    text-decoration: none;
+}
+
+a:focus, a:active {
+    outline: none;   /*обводка*/
+}
+
+/* h1,h2,h3,h4,h5,h6, p{     
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit; /*высота строки
+} */
+
+p + p {   /* следующий абзац после первого*/
+    margin-top: 1em;  /* делает отступ сверху в одну строку */
+}
+
+ul {
+    list-style: none;
+}
+
+img,svg,video{
+    display:inline-block;
+    vertical-align: top; /* убирает свободное место снизу картинки в боксе, когда она ниже чем бокс 
+                            Полезно, когда нужно «подкрутить» иконку или эмодзи, чтобы она сидела 
+                            ровно с текстом. работает только с инлайновыми и инлайн-блоковыми элем*/
+    max-width: 100%;  /*по ширине родительского контейнера*/
+    height: auto; /*пропорционально ширине*/
+    object-fit: cover; /*заставляет изображение (или видео) полностью 
+                          заполнить заданный контейнер, сохраняя при этом свои пропорции — 
+                          лишние края просто обрезаются.*/
+}
+
+input, textarea, button, select{
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button, input[type='submit'] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner{  /*для мазиллы браузера*/
+    padding: 0; 
+    border: none; 
+}
